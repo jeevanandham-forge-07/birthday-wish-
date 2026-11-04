@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Gayathri 💗</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --pink: #e9a6b8;
+  --deep: #9b5269;
+  --rose: #bd8b78;
+  --cream: #fffaf2;
+  --pale: #fcecf0;
+  --text: #694653;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Poppins, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 10% 10%, #f8dce4, transparent 35%),
+    radial-gradient(circle at 90% 70%, #f1ded0, transparent 35%),
+    linear-gradient(135deg, #fffaf2, #fbe9ed, #fff5eb);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 7px;
+  padding: 12px;
+  background: #fffaf2eF;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #e9c8c8;
+}
+nav button, .btn {
+  border: 1px solid #d7aa9a;
+  border-radius: 30px;
+  padding: 11px 17px;
+  background: white;
+  color: var(--deep);
+  cursor: pointer;
+  font: inherit;
+  transition: .25s;
+}
+nav button.active, nav button:hover, .btn {
+  background: linear-gradient(110deg, #d99aaa, #b98776);
+  color: white;
+}
+.btn:hover { transform: translateY(-3px); }
+.page {
+  display: none;
+  min-height: 85vh;
+  padding: 45px 16px 70px;
+  text-align: center;
+  animation: appear .6s ease;
+}
+.page.active { display: block; }
+h1, h2, h3 { font-family: "Playfair Display", serif; }
+h1 { font-size: clamp(2.7rem, 8vw, 5.5rem); line-height: 1.15; }
+h2 { color: var(--deep); }
+.script {
+  font-family: "Great Vibes", cursive;
+  color: #bd806f;
+  font-size: clamp(3.5rem, 10vw, 6.5rem);
+}
+.intro { max-width: 700px; margin: 20px auto; line-height: 2; }
+.card {
+  width: min(760px, 94%);
+  margin: 24px auto;
+  padding: 28px;
+  border: 1px solid #e8c9c0;
+  border-radius: 25px;
+  background: #fffdf8df;
+  box-shadow: 0 15px 45px #a86c6c19;
+}
+.grid {
+  width: min(950px, 96%);
+  margin: 25px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+.tile {
+  padding: 20px;
+  border-radius: 22px;
+  background: #fffdf8;
+  border: 1px solid #e8c9c0;
+  box-shadow: 0 10px 30px #a86c6c16;
+}
+.gift {
+  border: 0;
+  background: transparent;
+  font-size: 90px;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+}
+.hidden { display: none !important; }
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 25px auto;
+}
+.countdown div {
+  background: #fffdf8;
+  border: 1px solid #d8b39f;
+  border-radius: 15px;
+  padding: 15px;
+  min-width: 75px;
+}
+.countdown strong { display: block; font-size: 25px; color: var(--deep); }
+.photo-card {
+  cursor: pointer;
+  min-height: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 2px dashed #c99a91;
+  border-radius: 20px;
+  padding: 12px;
+  background: #fff7f3;
+  transition: .3s;
+}
+.photo-card:hover { transform: translateY(-5px); }
+.photo-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+.photo-card .reveal-message { line-height: 1.7; }
+input {
+  max-width: 90%;
+  padding: 13px;
+  border: 1px solid #c99a91;
+  border-radius: 12px;
+  font: inherit;
+}
+audio { width: 100%; margin: 12px 0; }
+#cake {
+  font-size: 100px;
+  margin: 20px;
+  transition: .4s;
+}
+#letter { white-space: pre-line; line-height: 2; text-align: left; }
+footer { padding: 25px; text-align: center; color: var(--deep); }
+.fall {
+  position: fixed;
+  top: -40px;
+  z-index: 50;
+  pointer-events: none;
+  animation: drop linear forwards;
+}
+@keyframes bounce {
+  50% { transform: translateY(-15px) rotate(4deg); }
+}
+@keyframes appear {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes drop {
+  to { transform: translateY(110vh) rotate(500deg); opacity: 0; }
+}
+@media(max-width:520px) {
+  nav button { padding: 8px 10px; font-size: 12px; }
+  .card { padding: 20px; }
+}
+/* BEAUTIFUL MEMORY MATCHING GAME */
+.match-card {
+  background: linear-gradient(145deg, #fffdf8, #fce9ee);
+  border: 2px solid #dfb5a7;
+}
+
+.game-label {
+  color: #b98776;
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+
+.game-info {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px 0;
+  color: #9b5269;
+}
+
+.memory-grid {
+  width: min(380px, 100%);
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.memory-card {
+  aspect-ratio: 1;
+  border: 2px solid #d5a59b;
+  border-radius: 17px;
+  background: linear-gradient(145deg, #d9a5ad, #b98776);
+  color: white;
+  font-size: 30px;
+  font-family: inherit;
+  cursor: pointer;
+  box-shadow: 0 5px 12px #9b526933;
+  transition: transform .25s, background .25s;
+}
+
+.memory-card:hover {
+  transform: translateY(-4px);
+}
+
+.memory-card.flipped,
+.memory-card.matched {
+  background: #fffaf2;
+  color: #a65e76;
+  border-color: #d5a59b;
+  transform: scale(.97);
+}
+
+.memory-card.matched {
+  background: #f8e4e8;
+  cursor: default;
+}
+
+.match-result {
+  min-height: 50px;
+  line-height: 1.8;
+  color: #9b5269;
+  font-weight: 600;
+}
+*/
+.secret-card {
+  background: linear-gradient(145deg, #fffaf2, #f9e5e9);
+  border: 2px solid #d5ad9e;
+  position: relative;
+  overflow: hidden;
+}/* ROMANTIC SECRET MESSAGE BOX */
+
+.secret-lock {
+  font-size: 65px;
+  animation: bounce 2s infinite;
+}
+
+.secret-label {
+  color: #b98776;
+  letter-spacing: 4px;
+  font-size: 12px;
+}
+
+.secret-hint {
+  margin: 22px auto;
+  padding: 15px;
+  max-width: 350px;
+  border: 1px dashed #c99a91;
+  border-radius: 15px;
+  background: #fffaf2;
+}
+
+.secret-hint span {
+  color: #a65e76;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+.secret-hint p {
+  margin-bottom: 0;
+}
+
+.secret-input {
+  width: min(350px, 95%);
+  text-align: center;
+  border: 2px solid #d5ad9e;
+  background: #fffdf8;
+  border-radius: 30px;
+  padding: 15px;
+  outline: none;
+}
+
+.secret-input:focus {
+  border-color: #a65e76;
+  box-shadow: 0 0 15px #d99aaa66;
+}
+
+.secret-button {
+  letter-spacing: 1px;
+}
+
+.secret-result {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 15px;
+  line-height: 1.9;
+  background: #fffaf2;
+  color: #9b5269;
+  font-weight: 500;
+  white-space: pre-line;
+}
+
+.secret-result.unlocked {
+  border: 1px solid #d5ad9e;
+  animation: appear .6s ease;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <button class="active" onclick="showPage(0)">🏠 Welcome</button>
+  <button onclick="showPage(1)">🌷 Wishes</button>
+  <button onclick="showPage(2)">📸 Photos</button>
+  <button onclick="showPage(3)">💌 Surprises</button>
+  <button onclick="showPage(4)">🎂 Finale</button>
+</nav>
+
+<!-- PAGE 1: WELCOME -->
+<section class="page active">
+  <p>✧ A LITTLE WORLD MADE JUST FOR YOU ✧</p>
+  <h1>Happy Birthday</h1>
+  <div class="script">Gayathri 💗</div>
+  <p class="intro">
+    A beautiful day for a beautiful soul.
+    This little world has been created with love,
+    just to make you smile. 💕
+  </p>
+
+  <h2>Your special day begins in...</h2>
+  <div class="countdown">
+    <div><strong id="days">00</strong>Days</div>
+    <div><strong id="hours">00</strong>Hours</div>
+    <div><strong id="minutes">00</strong>Minutes</div>
+    <div><strong id="seconds">00</strong>Seconds</div>
+  </div>
+  <p id="countdownText"></p>
+
+  <button class="gift" onclick="openGift()">🎁</button>
+  <div class="card hidden" id="giftMessage">
+    <h2>Surprise, Gayathri! 💖</h2>
+    <p>Today, every little detail is for you. Keep smiling, because your surprises are only beginning! 🌸</p>
+  </div>
+  <button class="btn" onclick="openGift()">OPEN YOUR GIFT ✨</button>
+  <button class="btn" onclick="showPage(1)">LET'S BEGIN →</button>
+</section>
+
+<!-- PAGE 2: WISHES -->
+<section class="page">
+  <p>🌸 TODAY IS ALL ABOUT YOU 🌸</p>
+  <h1>My Wishes for<br><span class="script">You, Gayathri</span></h1>
+
+  <div class="card">
+    <div style="font-size:70px">🎂</div>
+    <h2>Happy Birthday, Gayathri!</h2>
+    <p>
+      May your days be filled with happiness, your heart with peace,
+      your dreams with success, and your life with beautiful memories.
+      Never stop smiling. You deserve all the wonderful things in this world. 💗
+    </p>
+    <p>May this new chapter be the loveliest one yet. 🌷</p>
+    <button class="btn" onclick="chocolateShower()">CELEBRATE! 🍫</button>
+  </div>
+
+  <div class="grid">
+    <div class="tile"><div style="font-size:40px">🌷</div><h3>Happiness</h3><p>May your smile never fade and your heart always feel light.</p></div>
+    <div class="tile"><div style="font-size:40px">✨</div><h3>Dreams</h3><p>May every dream you carry find its beautiful way to come true.</p></div>
+    <div class="tile"><div style="font-size:40px">💖</div><h3>Love</h3><p>May you always be surrounded by kindness, care and love.</p></div>
+  </div>
+  <button class="btn" onclick="showPage(2)">OPEN YOUR MEMORIES →</button>
+</section>
+
+<!-- PAGE 3: PHOTO REVEAL GAME -->
+<section class="page">
+  <p>♡ LITTLE MOMENTS, BIG MEMORIES ♡</p>
+  <h1>Your Little<br><span class="script">Photo World</span></h1>
+  <p class="intro">Tap each hidden card to reveal a photo and a little message made especially for you. 💗</p>
+
+  <div class="grid">
+    <div class="tile">
+      <div class="photo-card" onclick="revealPhoto(0)">
+        <div id="cover0" style="font-size:55px">🎀</div>
+        <strong>Secret Photo 1</strong>
+        <span>Tap to reveal 💗</span>
+        <div id="photo0"></div>
+      </div>
+      <div id="message0" class="reveal-message"></div>
+    </div>
+
+    <div class="tile">
+      <div class="photo-card" onclick="revealPhoto(1)">
+        <div id="cover1" style="font-size:55px">🌸</div>
+        <strong>Secret Photo 2</strong>
+        <span>Tap to reveal 💗</span>
+        <div id="photo1"></div>
+      </div>
+      <div id="message1" class="reveal-message"></div>
+    </div>
+
+    <div class="tile">
+      <div class="photo-card" onclick="revealPhoto(2)">
+        <div id="cover2" style="font-size:55px">💝</div>
+        <strong>Secret Photo 3</strong>
+        <span>Tap to reveal 💗</span>
+        <div id="photo2"></div>
+      </div>
+      <div id="message2" class="reveal-message"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 id="photoProgress">0 / 3 memories revealed</h2>
+    <p id="photoWin">Reveal all three to unlock a special message. ✨</p>
+  </div>
+  <button class="btn" onclick="showPage(3)">CONTINUE TO SURPRISES →</button>
+</section>
+
+<!-- PAGE 4: LETTER, MUSIC AND SECRET -->
+<section class="page">
+  <p>💌 SOMETHING FROM THE HEART</p>
+  <h1>Just for <span class="script">You</span></h1>
+
+  <div class="card">
+    <h2>A Letter for Gayathri 💗</h2>
+    <p id="letter">Dear Gayathri,
+
+Some people make ordinary days feel special just by being themselves. You are one of those people.
+
+Your smile, your kindness and the little things that make you who you are deserve to be celebrated.
+
+I hope you always remember how special you are. Keep shining, keep dreaming and keep being wonderfully you.
+
+With lots of love,
+Anbheyyy 💖</p>
+    <button class="btn" onclick="chocolateShower()">SEND SOME CHOCOLATE LOVE 🍫</button>
+  </div>
+
+  <div class="card">
+    <h2>🎵 A Song for You</h2>
+    <h3>Kannana Kanne</h3>
+    <p>A special song for a special person. 💕</p>
+    <audio controls>
+      <source src="kannana-kanne.mp3" type="audio/mpeg">
+      Your browser does not support audio.
+    </audio>
+    <small>Add your own audio file named kannana-kanne.mp3 to the website folder.</small>
+  </div>
+
+  <div class="card">
+    <h2>🌙 A Little Musical Moment</h2>
+    <h3>Rathinamo BGM</h3>
+    <audio controls>
+      <source src="rathinamo-bgm.mp3" type="audio/mpeg">
+      Your browser does not support audio.
+    </audio>
+    <small>Add your own audio file named rathinamo-bgm.mp3 to the website folder.</small>
+  </div>
+
+ <div class="card secret-card">
+  <div class="secret-lock">🔐</div>
+  <p class="secret-label">✧ PRIVATE MESSAGE ✧</p>
+  <h2>A Little Secret for You</h2>
+
+  <p>
+    There is a special message waiting inside this little box.
+    Only the birthday girl can unlock it. 💗
+  </p>
+
+  <div class="secret-hint">
+    <span>💡 YOUR HINT</span>
+    <p>The name of the most special girl today!</p>
+  </div>
+
+  <input
+    id="secretCode"
+    class="secret-input"
+    type="text"
+    placeholder="Enter your secret word..."
+    autocomplete="off"
+  >
+
+  <br><br>
+
+  <button class="btn secret-button" onclick="unlockSecret()">
+    UNLOCK MY LETTER 💌
+  </button>
+
+  <div id="secretResult" class="secret-result"></div>
+</div>
+  <div class="card match-card">
+  <p class="game-label">♡ A LITTLE GAME FOR YOU ♡</p>
+  <h2>Find Your Matching Hearts 💗</h2>
+  <p>Turn over two cards and find all four matching pairs!</p>
+
+  <div class="game-info">
+    <span>Moves: <strong id="moves">0</strong></span>
+    <span>Pairs: <strong id="pairs">0 / 4</strong></span>
+  </div>
+
+  <div class="memory-grid" id="memoryGrid">
+    <button class="memory-card" onclick="flipCard(0)">?</button>
+    <button class="memory-card" onclick="flipCard(1)">?</button>
+    <button class="memory-card" onclick="flipCard(2)">?</button>
+    <button class="memory-card" onclick="flipCard(3)">?</button>
+    <button class="memory-card" onclick="flipCard(4)">?</button>
+    <button class="memory-card" onclick="flipCard(5)">?</button>
+    <button class="memory-card" onclick="flipCard(6)">?</button>
+    <button class="memory-card" onclick="flipCard(7)">?</button>
+  </div>
+
+  <p id="matchResult" class="match-result">
+    Good luck, Gayathri! Find your matching pairs. 🌸
+  </p>
+
+  <button class="btn" onclick="startMatchingGame()">↻ PLAY AGAIN</button>
+</div>
+
+  <button class="btn" onclick="showPage(4)">THE GRAND FINALE 🎆</button>
+</section>
+
+<!-- PAGE 5: FINALE -->
+<section class="page">
+  <p>✧ ONE LAST SURPRISE ✧</p>
+  <h1>For You,<br><span class="script">Gayathri</span></h1>
+
+  <div id="cake">🎂</div>
+  <div class="card">
+    <h2>Make a Birthday Wish! 🕯️</h2>
+    <p>Close your eyes, make a wish and cut your cake! 💗</p>
+    <button class="btn" onclick="cutCake()">🔪 CUT THE CAKE</button>
+    <p id="cakeMessage"></p>
+  </div>
+
+  <div class="card">
+    <h2>Happy Birthday, Gayathri! 💖</h2>
+    <p>
+      I hope this new chapter brings you beautiful surprises,
+      endless laughter, peaceful moments and countless reasons to smile.
+      May you always find happiness in the little things and strength
+      in every new beginning.
+    </p>
+    <p class="script">You are truly special.</p>
+    <p><b>Forever with love,</b></p>
+    <p class="script">Anbheyyy 💗</p>
+  </div>
+
+  <button class="btn" onclick="fireworks();chocolateShower()">🎆 LIGHT UP THE SKY</button>
+  <button class="btn" onclick="showPage(0)">↺ REPLAY THE SURPRISE</button>
+</section>
+
+<footer>Made with endless love 💗 especially for Gayathri</footer>
+
+<script>
+// CHANGE THE DATE HERE IF NEEDED.
+// Format: YYYY-MM-DD
+const birthday = new Date("2026-11-05T00:00:00");
+
+function updateCountdown() {
+  const now = new Date();
+  const diff = birthday - now;
+
+  if (diff <= 0) {
+    document.getElementById("countdownText").textContent =
+      "It's your special day! Happy Birthday, Gayathri! 🎂";
+    ["days","hours","minutes","seconds"].forEach(id =>
+      document.getElementById(id).textContent = "00"
+    );
+    return;
+  }
+
+  document.getElementById("days").textContent =
+    Math.floor(diff / 86400000);
+  document.getElementById("hours").textContent =
+    Math.floor((diff / 3600000) % 24);
+  document.getElementById("minutes").textContent =
+    Math.floor((diff / 60000) % 60);
+  document.getElementById("seconds").textContent =
+    Math.floor((diff / 1000) % 60);
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+function showPage(index) {
+  document.querySelectorAll(".page").forEach((page, i) =>
+    page.classList.toggle("active", i === index)
+  );
+  document.querySelectorAll("nav button").forEach((button, i) =>
+    button.classList.toggle("active", i === index)
+  );
+  window.scrollTo({top: 0, behavior: "smooth"});
+  chocolateShower();
+  if (index === 4) setTimeout(fireworks, 400);
+}
+
+function openGift() {
+  document.getElementById("giftMessage").classList.remove("hidden");
+  chocolateShower();
+}
+
+function chocolateShower() {
+  const sweets = ["🍫","🍬","💗","🍫","🍩","💕","🍫"];
+  for (let i = 0; i < 24; i++) {
+    const item = document.createElement("span");
+    item.className = "fall";
+    item.textContent = sweets[Math.floor(Math.random()*sweets.length)];
+    item.style.left = Math.random()*100 + "vw";
+    item.style.fontSize = (20 + Math.random()*22) + "px";
+    item.style.animationDuration = (3 + Math.random()*3) + "s";
+    document.body.appendChild(item);
+    setTimeout(() => item.remove(), 6500);
+  }
+}
+
+function fireworks() {
+  const symbols = ["🎆","✨","💖","🌟","🎇"];
+  for (let i = 0; i < 35; i++) {
+    setTimeout(() => {
+      const star = document.createElement("span");
+      star.className = "fall";
+      star.textContent = symbols[Math.floor(Math.random()*symbols.length)];
+      star.style.left = Math.random()*95 + "vw";
+      star.style.top = Math.random()*50 + "vh";
+      star.style.fontSize = "30px";
+      star.style.animationDuration = "3s";
+      document.body.appendChild(star);
+      setTimeout(() => star.remove(), 3500);
+    }, i*60);
+  }
+}
+
+// PHOTO GAME
+const photoFiles = ["photo1.jpeg","photo2.jpg","photo3.jpg"];
+const compliments = [
+  "Some people don't even realise how much happiness their smile brings. You're one of those rare people who can make an ordinary moment feel special. 💗",
+  "Your kindness is something words can never completely describe. Never change the beautiful person you are. 🌸",
+  "There is nobody quite like you. Your little habits, your laughter and your presence make you unforgettable. 💖"
+];
+const revealed = [false,false,false];
+
+function revealPhoto(index) {
+  if (revealed[index]) return;
+  revealed[index] = true;
+
+  const img = document.createElement("img");
+  img.src = photoFiles[index];
+  img.alt = "Gayathri's special photo";
+  img.onerror = function() {
+    this.style.display = "none";
+    document.getElementById("photo"+index).textContent =
+      "Add " + photoFiles[index] + " to the website folder to show this photo.";
+  };
+  document.getElementById("photo"+index).appendChild(img);
+  document.getElementById("cover"+index).textContent = "💝";
+  document.getElementById("message"+index).textContent = compliments[index];
+
+  const total = revealed.filter(Boolean).length;
+  document.getElementById("photoProgress").textContent =
+    total + " / 3 memories revealed";
+
+  if (total === 3) {
+    document.getElementById("photoWin").textContent =
+      "You unlocked the biggest truth: you are a truly wonderful person, Gayathri! 💗";
+    chocolateShower();
+  }
+}
+
+// SECRET MESSAGE
+// SECRET LOVE LETTER UNLOCK
+function unlockSecret() {
+  const correctCode = "GAYATHRI";
+  const entered = document
+    .getElementById("secretCode")
+    .value.trim();
+
+  const result = document.getElementById("secretResult");
+
+  if (entered.toUpperCase() === correctCode) {
+    result.classList.add("unlocked");
+
+    result.textContent =
+      "💌 DEAR GAYATHRI,\n\n" +
+      "You are more special than words can ever explain. " +
+      "Your smile, your kindness and your beautiful presence " +
+      "make this world a little brighter.\n\n" +
+      "Never forget how precious you are. " +
+      "Keep smiling and keep shining!\n\n" +
+      "With lots of love,\nAnbheyyy 💗";
+
+    chocolateShower();
+    fireworks();
+
+  } else {
+    result.classList.remove("unlocked");
+    result.textContent =
+      "Oops! That isn't the right code. Try again, birthday girl! 💕";
+  }
+}
+// HEART GAME
+// MEMORY MATCHING GAME
+const matchSymbols = ["🌸", "💗", "🎀", "🦋"];
+let matchCards = [];
+let firstCard = null;
+let secondCard = null;
+let lockBoard = false;
+let moves = 0;
+let matchedPairs = 0;
+
+function startMatchingGame() {
+  matchCards = [...matchSymbols, ...matchSymbols]
+    .sort(() => Math.random() - 0.5);
+
+  firstCard = null;
+  secondCard = null;
+  lockBoard = false;
+  moves = 0;
+  matchedPairs = 0;
+
+  document.getElementById("moves").textContent = "0";
+  document.getElementById("pairs").textContent = "0 / 4";
+  document.getElementById("matchResult").textContent =
+    "Good luck, Gayathri! Find your matching pairs. 🌸";
+
+  const grid = document.getElementById("memoryGrid");
+  grid.innerHTML = "";
+
+  matchCards.forEach((symbol, index) => {
+    const card = document.createElement("button");
+    card.className = "memory-card";
+    card.textContent = "?";
+    card.setAttribute("aria-label", "Hidden memory card");
+    card.onclick = () => flipCard(index);
+    grid.appendChild(card);
+  });
+}
+
+function flipCard(index) {
+  if (lockBoard) return;
+
+  const cards = document.querySelectorAll(".memory-card");
+  const clicked = cards[index];
+
+  if (!clicked || clicked.classList.contains("flipped") ||
+      clicked.classList.contains("matched")) return;
+
+  clicked.textContent = matchCards[index];
+  clicked.classList.add("flipped");
+
+  if (firstCard === null) {
+    firstCard = index;
+    return;
+  }
+
+  secondCard = index;
+  moves++;
+
+  document.getElementById("moves").textContent = moves;
+
+  if (matchCards[firstCard] === matchCards[secondCard]) {
+    cards[firstCard].classList.add("matched");
+    cards[secondCard].classList.add("matched");
+
+    matchedPairs++;
+    document.getElementById("pairs").textContent =
+      matchedPairs + " / 4";
+
+    firstCard = null;
+    secondCard = null;
+
+    if (matchedPairs === 4) {
+      document.getElementById("matchResult").textContent =
+        "You did it, Gayathri! Every match is a little reminder that you are one of a kind. 💖";
+
+      chocolateShower();
+      fireworks();
+    }
+  } else {
+    lockBoard = true;
+
+    setTimeout(() => {
+      cards[firstCard].textContent = "?";
+      cards[secondCard].textContent = "?";
+      cards[firstCard].classList.remove("flipped");
+      cards[secondCard].classList.remove("flipped");
+
+      firstCard = null;
+      secondCard = null;
+      lockBoard = false;
+    }, 850);
+  }
+}
+
+// Start with a fresh game
+startMatchingGame();
+
+// CAKE CUTTING
+function cutCake() {
+  document.getElementById("cake").textContent = "🍰";
+  document.getElementById("cakeMessage").textContent =
+    "Yay! The cake is cut! Happy Birthday, Gayathri! Make every wish come true! 💗";
+  chocolateShower();
+  fireworks();
+}
+</script>
+
+</body>
+</html>

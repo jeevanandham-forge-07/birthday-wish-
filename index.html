@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f8e5eb">
+<title>Happy Birthday Gayathri 💗</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{--pink:#e9a6b8;--deep:#98536c;--rose:#bd8b78;--cream:#fffaf2;--pale:#fcecf0;--ink:#694653;--glass:rgba(255,253,248,.84)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;font-family:Poppins,sans-serif;color:var(--ink);background:radial-gradient(circle at 8% 8%,#f8dce4 0,transparent 30%),radial-gradient(circle at 92% 72%,#f1ded0 0,transparent 32%),linear-gradient(135deg,#fffaf2,#fbe9ed,#fff5eb);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:radial-gradient(#bd8b78 .7px,transparent .7px);background-size:19px 19px;z-index:-1}
+nav{position:sticky;top:0;z-index:20;display:flex;justify-content:center;flex-wrap:wrap;gap:8px;padding:12px;background:rgba(255,250,242,.9);backdrop-filter:blur(14px);border-bottom:1px solid #e9c8c8;box-shadow:0 5px 20px #9b526910}
+nav button,.btn{border:1px solid #d7aa9a;border-radius:30px;padding:11px 17px;background:#fff;color:var(--deep);cursor:pointer;font:600 13px Poppins,sans-serif;letter-spacing:.3px;transition:transform .25s,box-shadow .25s,background .25s}
+nav button:hover,.btn:hover{transform:translateY(-3px);box-shadow:0 9px 20px #9b526922}
+nav button.active,.btn.primary,.btn{background:linear-gradient(110deg,#d99aaa,#b98776);color:white}
+.page{display:none;min-height:84vh;padding:50px 16px 75px;text-align:center;animation:appear .55s ease}
+.page.active{display:block}
+h1,h2,h3{font-family:"Playfair Display",serif}
+h1{font-size:clamp(2.6rem,8vw,5.4rem);line-height:1.12;margin:15px 0}
+h2{color:var(--deep)}
+.script{font-family:"Great Vibes",cursive;color:#bd806f;font-size:clamp(3.5rem,10vw,6.5rem);line-height:1.15}
+.eyebrow{letter-spacing:3px;color:#b98776;font-size:12px;font-weight:600}
+.intro{max-width:720px;margin:20px auto;line-height:2}
+.card{width:min(780px,95%);margin:25px auto;padding:28px;border:1px solid #e8c9c0;border-radius:26px;background:var(--glass);box-shadow:0 15px 45px #a86c6c19;backdrop-filter:blur(8px)}
+.grid{width:min(1050px,96%);margin:26px auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.tile{padding:19px;border-radius:23px;background:#fffdf8;border:1px solid #e8c9c0;box-shadow:0 10px 30px #a86c6c16;transition:transform .3s,box-shadow .3s}
+.tile:hover{transform:translateY(-6px);box-shadow:0 16px 35px #a86c6c25}
+.gift{border:0;background:transparent;font-size:88px;cursor:pointer;animation:bounce 2s infinite}
+.hidden{display:none!important}
+.countdown{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:25px auto}
+.countdown div{background:#fffdf8;border:1px solid #d8b39f;border-radius:17px;padding:15px;min-width:82px;box-shadow:0 8px 20px #9b526910}
+.countdown strong{display:block;font-size:27px;color:var(--deep)}
+.photo-card{cursor:pointer;min-height:250px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px;border:2px dashed #c99a91;border-radius:20px;padding:12px;background:linear-gradient(145deg,#fff7f3,#fcecf0);transition:.3s;overflow:hidden}
+.photo-card:hover{transform:translateY(-5px) scale(1.01)}
+.photo-card img{width:100%;height:260px;object-fit:cover;border-radius:15px;box-shadow:0 8px 22px #69465322;animation:appear .5s ease}
+.photo-card .cover-icon{font-size:58px}
+.reveal-message{line-height:1.8;margin-top:12px;color:var(--deep)}
+.photo-note{font-size:12px;color:#9c7780}
+input{max-width:95%;padding:14px;border:1px solid #c99a91;border-radius:30px;font:inherit;outline:none}
+input:focus{border-color:var(--deep);box-shadow:0 0 0 4px #d99aaa33}
+.secret-card{background:linear-gradient(145deg,#fffaf2,#f9e5e9);border:2px solid #d5ad9e;position:relative;overflow:hidden}
+.secret-lock{font-size:62px;animation:bounce 2s infinite}
+.secret-hint{margin:20px auto;padding:14px;max-width:350px;border:1px dashed #c99a91;border-radius:15px;background:#fffaf2}
+.secret-result{margin-top:20px;padding:17px;border-radius:15px;line-height:1.9;background:#fffaf2;color:var(--deep);white-space:pre-line}
+.secret-result.unlocked{border:1px solid #d5ad9e;animation:appear .6s ease}
+audio{width:min(500px,100%);margin:12px 0}
+#cake{font-size:clamp(90px,18vw,140px);margin:25px;transition:.4s;filter:drop-shadow(0 12px 12px #9b526922)}
+#letter{white-space:pre-line;line-height:2;text-align:left}
+.match-card{background:linear-gradient(145deg,#fffdf8,#fce9ee);border:2px solid #dfb5a7}
+.game-label{color:#b98776;letter-spacing:3px;font-size:12px}
+.game-info{display:flex;justify-content:center;gap:30px;margin:20px 0;color:#9b5269}
+.memory-grid{width:min(390px,100%);margin:20px auto;display:grid;grid-template-columns:repeat(4,1fr);gap:11px}
+.memory-card{aspect-ratio:1;border:2px solid #d5a59b;border-radius:17px;background:linear-gradient(145deg,#d9a5ad,#b98776);color:white;font-size:clamp(22px,5vw,31px);cursor:pointer;box-shadow:0 5px 12px #9b526933;transition:transform .2s,background .2s}
+.memory-card:hover{transform:translateY(-3px)}
+.memory-card.flipped,.memory-card.matched{background:#fffaf2;color:#a65e76;transform:scale(.97)}
+.memory-card.matched{background:#f8e4e8;cursor:default}
+.match-result{min-height:50px;line-height:1.8;color:#9b5269;font-weight:600}
+footer{padding:25px;text-align:center;color:var(--deep)}
+.fall{position:fixed;top:-45px;z-index:50;pointer-events:none;animation:drop linear forwards}
+.spark{position:fixed;z-index:60;pointer-events:none;font-size:25px;animation:burst 1.5s ease-out forwards}
+@keyframes bounce{50%{transform:translateY(-13px) rotate(4deg)}}
+@keyframes appear{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes drop{to{transform:translateY(110vh) rotate(500deg);opacity:0}}
+@keyframes burst{0%{transform:translate(0,0) scale(.3);opacity:1}100%{transform:translate(var(--dx),var(--dy)) scale(1.4);opacity:0}}
+
+@media(max-width:560px){
+nav{gap:5px;padding:9px 5px}
+nav button{padding:9px 10px;font-size:11px}
+.page{padding:35px 12px 55px}
+.card{padding:20px}
+.game-info{gap:18px}
+}
+
+/* Birthday video overlay */
+.cake-video-overlay{
+position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;
+padding:clamp(10px,3vw,28px);background:radial-gradient(circle at center,#4a2038 0%,#170d19 72%);
+animation:videoFadeIn .45s ease both;
+}
+.cake-video-overlay.show{display:flex}
+.cake-video-frame{position:relative;width:min(1100px,100%);height:min(92vh,760px);display:flex;
+align-items:center;justify-content:center;border:2px solid #e9b8c7;border-radius:22px;
+overflow:hidden;background:#160d16;box-shadow:0 0 55px #f5b6cf55}
+.cake-video-frame video{display:block;width:100%;height:100%;object-fit:contain;background:#160d16}
+.cake-video-close{position:absolute;top:12px;right:12px;z-index:2;width:42px;height:42px;
+border:1px solid #ffffff88;border-radius:50%;background:#381d2bd9;color:#fff;font-size:24px;
+cursor:pointer;display:grid;place-items:center}
+.cake-video-close:hover{background:#9b5269;transform:scale(1.06)}
+.cake-video-fallback{position:absolute;inset:0;display:none;align-items:center;justify-content:center;
+flex-direction:column;gap:12px;padding:25px;text-align:center;color:#fff;background:#321c2b}
+.cake-video-fallback.show{display:flex}
+.cake-video-fallback p{max-width:560px;line-height:1.8}
+.cake-video-fallback button{border:0;border-radius:25px;padding:11px 20px;background:#e5a6b8;color:#54283c;
+font:600 14px Poppins,sans-serif;cursor:pointer}
+@keyframes videoFadeIn{from{opacity:0}to{opacity:1}}
+@media(max-width:600px){
+.cake-video-overlay{padding:0}
+.cake-video-frame{width:100%;height:100%;border:0;border-radius:0}
+.cake-video-frame video{width:100%;height:100%;object-fit:contain}
+.cake-video-close{top:10px;right:10px}
+}
+</style>
+</head>
+
+<body>
+
+<!-- BACKGROUND MUSIC: Plays throughout the entire website -->
+<audio id="backgroundMusic" autoplay loop preload="auto">
+    <source src="rathinamo.mpeg" type="audio/mpeg">
+    Your browser does not support audio.
+</audio>
+
+<nav aria-label="Birthday pages">
+<button class="active" type="button" onclick="showPage(0)">🏠 Welcome</button>
+<button type="button" onclick="showPage(1)">🌷 Wishes</button>
+<button type="button" onclick="showPage(2)">📸 Photos</button>
+<button type="button" onclick="showPage(3)">💌 Surprises</button>
+<button type="button" onclick="showPage(4)">🎂 Finale</button>
+</nav>
+
+<section class="page active" id="page0">
+<p class="eyebrow">✧ A LITTLE WORLD MADE JUST FOR YOU ✧</p>
+<h1>Happy Birthday</h1>
+<div class="script">Gayathri 💗</div>
+<p class="intro">A beautiful day for a beautiful soul. This little world has been created with love, just to make you smile. 💕</p>
+<h2>Your special day begins in...</h2>
+<div class="countdown">
+<div><strong id="days">00</strong>Days</div>
+<div><strong id="hours">00</strong>Hours</div>
+<div><strong id="minutes">00</strong>Minutes</div>
+<div><strong id="seconds">00</strong>Seconds</div>
+</div>
+<p id="countdownText" aria-live="polite"></p>
+<button class="gift" type="button" onclick="openGift()" aria-label="Open birthday gift">🎁</button>
+<div class="card hidden" id="giftMessage">
+<h2>Surprise, Gayathri! 💖</h2>
+<p>Today, every little detail is for you. Keep smiling, because your surprises are only beginning! 🌸</p>
+</div>
+<button class="btn" type="button" onclick="openGift()">OPEN YOUR GIFT ✨</button>
+<button class="btn" type="button" onclick="showPage(1)">LET'S BEGIN →</button>
+</section>
+
+<section class="page" id="page1">
+<p class="eyebrow">🌸 TODAY IS ALL ABOUT YOU 🌸</p>
+<h1>My Wishes for<br><span class="script">You, Gayathri</span></h1>
+<div class="card">
+<div style="font-size:70px">🎂</div>
+<h2>Happy Birthday, Gayathri!</h2>
+<p>May your days be filled with happiness, your heart with peace, your dreams with success, and your life with beautiful memories. Never stop smiling. You deserve all the wonderful things in this world. 💗</p>
+<p>May this new chapter be the loveliest one yet. 🌷</p>
+<button class="btn" type="button" onclick="chocolateShower()">CELEBRATE! 🍫</button>
+</div>
+<div class="grid">
+<div class="tile"><div style="font-size:40px">🌷</div><h3>Happiness</h3><p>May your smile never fade and your heart always feel light.</p></div>
+<div class="tile"><div style="font-size:40px">✨</div><h3>Dreams</h3><p>May every dream you carry find its beautiful way to come true.</p></div>
+<div class="tile"><div style="font-size:40px">💖</div><h3>Love</h3><p>May you always be surrounded by kindness, care and love.</p></div>
+</div>
+<button class="btn" type="button" onclick="showPage(2)">OPEN YOUR MEMORIES →</button>
+</section>
+
+<section class="page" id="page2">
+<p class="eyebrow">♡ LITTLE MOMENTS, BIG MEMORIES ♡</p>
+<h1>Your Little<br><span class="script">Photo World</span></h1>
+<p class="intro">Tap each hidden card to reveal a photo and a little message made especially for you. 💗</p>
+<div class="grid" id="photoGrid"></div>
+<div class="card">
+<h2 id="photoProgress">0 / 5 memories revealed</h2>
+<p id="photoWin">Reveal all five to unlock a special message. ✨</p>
+</div>
+<p class="photo-note">If a picture does not appear, check that its filename in the code matches the file in your project folder.</p>
+<button class="btn" type="button" onclick="showPage(3)">CONTINUE TO SURPRISES →</button>
+</section>
+
+<section class="page" id="page3">
+<p class="eyebrow">💌 SOMETHING FROM THE HEART</p>
+<h1>Just for <span class="script">You</span></h1>
+
+<div class="card">
+<h2>A Letter for Gayathri 💗</h2>
+<p id="letter">Dear Gayathri,
+
+Some people make ordinary days feel special just by being themselves. You are one of those people.
+
+Your smile, your kindness and the little things that make you who you are deserve to be celebrated.
+
+I hope you always remember how special you are. Keep shining, keep dreaming and keep being wonderfully you.
+
+With lots of love,
+Anbheyyy 💖</p>
+<button class="btn" type="button" onclick="chocolateShower()">SEND SOME CHOCOLATE LOVE 🍫</button>
+</div>
+
+<div class="card">
+<h2>🎵 A Song for You</h2>
+<h3>Naanum Rowdy Dhaan – Music</h3>
+<p>A little musical moment for a special person. 💕</p>
+<audio controls preload="metadata">
+<source src="naanum-rowdy-dhaan.m4a" type="audio/mp4">
+Your browser does not support audio.
+</audio>
+<p class="photo-note">The audio file should be in the same folder as index.html.</p>
+</div>
+
+<div class="card secret-card">
+<div class="secret-lock">🔐</div>
+<p class="eyebrow">✧ PRIVATE MESSAGE ✧</p>
+<h2>A Little Secret for You</h2>
+<p>There is a special message waiting inside this little box. Only the birthday girl can unlock it. 💗</p>
+<div class="secret-hint">
+<strong>💡 YOUR HINT</strong>
+<p>The name of the most special girl today!</p>
+</div>
+<input id="secretCode" type="text" placeholder="Enter your secret word..." autocomplete="off" aria-label="Secret word">
+<br><br>
+<button class="btn" type="button" onclick="unlockSecret()">UNLOCK MY LETTER 💌</button>
+<div id="secretResult" class="secret-result" aria-live="polite"></div>
+</div>
+
+<div class="card match-card">
+<p class="game-label">♡ A LITTLE GAME FOR YOU ♡</p>
+<h2>Find Your Matching Hearts 💗</h2>
+<p>Turn over two cards and find all four matching pairs!</p>
+<div class="game-info">
+<span>Moves: <strong id="moves">0</strong></span>
+<span>Pairs: <strong id="pairs">0 / 4</strong></span>
+</div>
+<div class="memory-grid" id="memoryGrid"></div>
+<p id="matchResult" class="match-result" aria-live="polite">Good luck, Gayathri! Find your matching pairs. 🌸</p>
+<button class="btn" type="button" onclick="startMatchingGame()">↻ PLAY AGAIN</button>
+</div>
+
+<button class="btn" type="button" onclick="showPage(4)">THE GRAND FINALE 🎆</button>
+</section>
+
+<section class="page" id="page4">
+<p class="eyebrow">✧ ONE LAST SURPRISE ✧</p>
+<h1>For You,<br><span class="script">Gayathri</span></h1>
+<div id="cake">🎂</div>
+
+<div class="card">
+<h2>Make a Birthday Wish! 🕯️</h2>
+<p>Close your eyes, make a wish and cut your cake! 💗</p>
+<button class="btn" type="button" onclick="cutCake()">🔪 CUT THE CAKE</button>
+<p id="cakeMessage" aria-live="polite"></p>
+</div>
+
+<div class="card">
+<h2>Happy Birthday, Gayathri! 💖</h2>
+<p>I hope this new chapter brings you beautiful surprises, endless laughter, peaceful moments and countless reasons to smile. May you always find happiness in the little things and strength in every new beginning.</p>
+<p class="script">You are truly special.</p>
+<p><b>Forever with love,</b></p>
+<p class="script">Anbheyyy 💗</p>
+</div>
+
+<button class="btn" type="button" onclick="fireworks();chocolateShower()">🎆 LIGHT UP THE SKY</button>
+<button class="btn" type="button" onclick="showPage(0)">↺ REPLAY THE SURPRISE</button>
+</section>
+
+<!-- Birthday cake video -->
+<div class="cake-video-overlay" id="cakeVideoOverlay" role="dialog" aria-modal="true" aria-label="Gayathri's birthday cake-cutting animation">
+<div class="cake-video-frame">
+<button class="cake-video-close" type="button" onclick="closeCakeVideo()" aria-label="Close animation">×</button>
+<video id="cakePartyVideo" playsinline preload="metadata">
+<source src="WhatsApp Video 2026-11-04 at 1.28.56 PM.mp4" type="video/mp4">
+Your browser does not support MP4 video.
+</video>
+<div class="cake-video-fallback" id="cakeVideoFallback">
+<div style="font-size:56px">🎂💗</div>
+<h2 style="color:#fff">A little birthday party surprise!</h2>
+<p id="cakeVideoError">The birthday animation could not be loaded. Please check that the MP4 file is in the same folder as index.html and that its filename matches exactly.</p>
+<button type="button" onclick="retryCakeVideo()">TRY AGAIN</button>
+</div>
+</div>
+</div>
+
+<footer>Made with endless love 💗 especially for Gayathri</footer>
+
+<script>
+'use strict';
+
+/* ==========================================
+   BACKGROUND MUSIC SETTINGS
+   ========================================== */
+
+const backgroundMusic = document.getElementById('backgroundMusic');
+
+// Set background music volume.
+backgroundMusic.volume = 0.65;
+
+// Try to start music automatically when the website opens.
+function playBackgroundMusic() {
+    if (backgroundMusic.paused) {
+        backgroundMusic.play().catch(() => {
+            // Browser autoplay restrictions may require user interaction.
+        });
+    }
+}
+
+// Try autoplay immediately.
+playBackgroundMusic();
+
+// Retry when the visitor interacts with the website.
+function startMusicOnInteraction() {
+    playBackgroundMusic();
+}
+
+document.addEventListener('click', startMusicOnInteraction);
+document.addEventListener('touchstart', startMusicOnInteraction);
+document.addEventListener('keydown', startMusicOnInteraction);
+
+// Repeat music continuously.
+backgroundMusic.addEventListener('ended', () => {
+    backgroundMusic.currentTime = 0;
+    playBackgroundMusic();
+});
+
+// Birthday date: 5 November 2026.
+const birthday = new Date(2026, 10, 5, 0, 0, 0);
+
+const photoFiles = [
+'IMG-20261025-WA0005.jpg',
+'IMG-20261025-WA0028.jpg',
+'IMG-20261025-WA0033.jpg',
+'IMG-20261025-WA0036.jpg',
+'IMG-20261025-WA0037.jpg'
+];
+
+const compliments = [
+'Some people bring happiness just by being there. Your smile is one of those little gifts. 💗',
+'Your kindness makes ordinary moments feel special. Never change your beautiful self. 🌸',
+'A lovely memory, a lovely smile and a person who makes life brighter. 💖',
+'May you create a thousand more memories as beautiful as this one. ✨',
+'There is nobody quite like you. Keep shining, Gayathri! 🎀'
+];
+
+const revealed = Array(photoFiles.length).fill(false);
+
+function updateCountdown(){
+const diff=birthday.getTime()-Date.now();
+
+if(diff<=0){
+document.getElementById('countdownText').textContent="It's your special day! Happy Birthday, Gayathri! 🎂";
+['days','hours','minutes','seconds'].forEach(id=>document.getElementById(id).textContent='00');
+return;
+}
+
+document.getElementById('countdownText').textContent='Counting down to your beautiful day... 💗';
+document.getElementById('days').textContent=Math.floor(diff/86400000);
+document.getElementById('hours').textContent=Math.floor(diff/3600000)%24;
+document.getElementById('minutes').textContent=Math.floor(diff/60000)%60;
+document.getElementById('seconds').textContent=Math.floor(diff/1000)%60;
+}
+
+updateCountdown();
+setInterval(updateCountdown,1000);
+
+function showPage(index){
+const pages=document.querySelectorAll('.page');
+if(index<0||index>=pages.length)return;
+
+pages.forEach((page,i)=>page.classList.toggle('active',i===index));
+
+document.querySelectorAll('nav button').forEach((button,i)=>{
+button.classList.toggle('active',i===index);
+button.setAttribute('aria-current',i===index?'page':'false');
+});
+
+window.scrollTo({top:0,behavior:'smooth'});
+
+// Keep background music playing during page navigation.
+playBackgroundMusic();
+
+if(index===4)setTimeout(fireworks,350);
+}
+
+function openGift(){
+document.getElementById('giftMessage').classList.remove('hidden');
+chocolateShower();
+}
+
+function chocolateShower(){
+const sweets=['🍫','🍬','💗','🍩','💕','🌸'];
+
+for(let i=0;i<24;i++){
+const item=document.createElement('span');
+item.className='fall';
+item.textContent=sweets[Math.floor(Math.random()*sweets.length)];
+item.style.left=Math.random()*100+'vw';
+item.style.fontSize=(20+Math.random()*22)+'px';
+item.style.animationDuration=(3+Math.random()*3)+'s';
+document.body.appendChild(item);
+setTimeout(()=>item.remove(),6500);
+}
+}
+
+function fireworks(){
+const symbols=['🎆','✨','💖','🌟','🎇'];
+
+for(let i=0;i<32;i++){
+setTimeout(()=>{
+const star=document.createElement('span');
+star.className='spark';
+star.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+star.style.left=(10+Math.random()*80)+'vw';
+star.style.top=(15+Math.random()*55)+'vh';
+star.style.setProperty('--dx',(Math.random()*180-90)+'px');
+star.style.setProperty('--dy',(Math.random()*180-90)+'px');
+document.body.appendChild(star);
+setTimeout(()=>star.remove(),1600);
+},i*35);
+}
+}
+
+function buildPhotoCards(){
+const grid=document.getElementById('photoGrid');
+
+photoFiles.forEach((file,index)=>{
+const tile=document.createElement('div');
+tile.className='tile';
+
+const card=document.createElement('button');
+card.type='button';
+card.className='photo-card';
+card.id='photoCard'+index;
+card.setAttribute('aria-label','Reveal memory '+(index+1));
+
+card.innerHTML='<span class="cover-icon">'+['🎀','🌸','💝','🦋','🌷'][index]+'</span><strong>Secret Photo '+(index+1)+'</strong><span>Tap to reveal 💗</span>';
+
+card.addEventListener('click',()=>revealPhoto(index));
+
+const message=document.createElement('p');
+message.className='reveal-message';
+message.id='message'+index;
+
+tile.append(card,message);
+grid.appendChild(tile);
+});
+}
+
+function revealPhoto(index){
+if(revealed[index])return;
+revealed[index]=true;
+
+const card=document.getElementById('photoCard'+index);
+card.innerHTML='';
+
+const img=document.createElement('img');
+img.src=photoFiles[index];
+img.alt='A special birthday memory '+(index+1);
+
+img.onerror=function(){
+this.remove();
+const error=document.createElement('span');
+error.className='photo-note';
+error.textContent='Photo not found: '+photoFiles[index]+'. Check the filename and folder.';
+card.appendChild(error);
+};
+
+card.appendChild(img);
+
+const caption=document.createElement('strong');
+caption.textContent='Memory '+(index+1)+' 💗';
+card.appendChild(caption);
+
+document.getElementById('message'+index).textContent=compliments[index];
+
+const total=revealed.filter(Boolean).length;
+
+document.getElementById('photoProgress').textContent=total+' / '+photoFiles.length+' memories revealed';
+
+if(total===photoFiles.length){
+document.getElementById('photoWin').textContent='You unlocked the biggest truth: you are a truly wonderful person, Gayathri! 💗';
+fireworks();
+}
+}
+
+function unlockSecret(){
+const entered=document.getElementById('secretCode').value.trim().toUpperCase();
+const result=document.getElementById('secretResult');
+
+if(entered==='GAYATHRI'){
+result.classList.add('unlocked');
+result.textContent='💌 DEAR GAYATHRI,\n\n Unakku enna sollanum, epdi sollanum nu theriyala… because nee en life la evlo special nu words la explain panna mudiyadhu. Sila per namma life la vandhu poguraanga, aana sila per namma heart la oru permanent place eduthukuvaanga… nee andha maari oruthavanga. Un smile, un happiness, un presence ellame enakku romba precious. Life la nee evlo kashtam face pannalum, un face la irukura smile mattum never disappear aaganum nu dhaan naan wish panren.\n\nUnakku nee expect panra happiness vida adhigama happiness kidaikkanum, un dreams ellame fulfil aaganum. Naan always un happiness ku genuinely wish panra oruthana iruppen. En life la nee irukradhu itself oru beautiful feeling, and adhukku naan always thankful.\n\nUnakku indha birthday mattum illa, un life oda every single day um beautiful ah irukkanum. Happy Birthday to my special person, Gayathri… nee eppovume happy ah iru, because un happiness enakku romba important. 🤎✨\nAnbheyyy 💗';
+
+chocolateShower();
+fireworks();
+}else{
+result.classList.remove('unlocked');
+result.textContent='Oops! That is not the right code. Hint: GAYATHRI 💕';
+}
+}
+
+document.getElementById('secretCode').addEventListener('keydown',event=>{
+if(event.key==='Enter')unlockSecret();
+});
+
+const matchSymbols=['🌸','💗','🎀','🦋'];
+
+let matchCards=[];
+let firstCard=null;
+let secondCard=null;
+let lockBoard=false;
+let moves=0;
+let matchedPairs=0;
+
+function startMatchingGame(){
+matchCards=[...matchSymbols,...matchSymbols];
+
+for(let i=matchCards.length-1;i>0;i--){
+const j=Math.floor(Math.random()*(i+1));
+[matchCards[i],matchCards[j]]=[matchCards[j],matchCards[i]];
+}
+
+firstCard=null;
+secondCard=null;
+lockBoard=false;
+moves=0;
+matchedPairs=0;
+
+document.getElementById('moves').textContent='0';
+document.getElementById('pairs').textContent='0 / 4';
+document.getElementById('matchResult').textContent='Good luck, Gayathri! Find your matching pairs. 🌸';
+
+const grid=document.getElementById('memoryGrid');
+grid.innerHTML='';
+
+matchCards.forEach((symbol,index)=>{
+const card=document.createElement('button');
+card.type='button';
+card.className='memory-card';
+card.textContent='?';
+card.setAttribute('aria-label','Hidden memory card '+(index+1));
+card.addEventListener('click',()=>flipCard(index));
+grid.appendChild(card);
+});
+}
+
+function flipCard(index){
+if(lockBoard)return;
+
+const cards=document.querySelectorAll('.memory-card');
+const clicked=cards[index];
+
+if(!clicked||clicked.classList.contains('flipped')||clicked.classList.contains('matched'))return;
+
+clicked.textContent=matchCards[index];
+clicked.classList.add('flipped');
+clicked.setAttribute('aria-label',matchCards[index]);
+
+if(firstCard===null){
+firstCard=index;
+return;
+}
+
+secondCard=index;
+moves++;
+
+document.getElementById('moves').textContent=moves;
+
+if(matchCards[firstCard]===matchCards[secondCard]){
+cards[firstCard].classList.add('matched');
+cards[secondCard].classList.add('matched');
+
+matchedPairs++;
+document.getElementById('pairs').textContent=matchedPairs+' / 4';
+
+firstCard=null;
+secondCard=null;
+
+if(matchedPairs===4){
+document.getElementById('matchResult').textContent='You did it, Gayathri! Every match is a little reminder that you are one of a kind. 💖';
+chocolateShower();
+fireworks();
+}
+
+}else{
+lockBoard=true;
+
+const first=firstCard;
+const second=secondCard;
+
+setTimeout(()=>{
+cards[first].textContent='?';
+cards[second].textContent='?';
+
+cards[first].classList.remove('flipped');
+cards[second].classList.remove('flipped');
+
+cards[first].setAttribute('aria-label','Hidden memory card');
+cards[second].setAttribute('aria-label','Hidden memory card');
+
+firstCard=null;
+secondCard=null;
+lockBoard=false;
+},850);
+}
+}
+
+/* Birthday cake video */
+
+function cutCake(){
+const overlay=document.getElementById('cakeVideoOverlay');
+const video=document.getElementById('cakePartyVideo');
+const fallback=document.getElementById('cakeVideoFallback');
+const cakeMessage=document.getElementById('cakeMessage');
+
+overlay.classList.add('show');
+fallback.classList.remove('show');
+document.body.style.overflow='hidden';
+
+cakeMessage.textContent='Your birthday party is beginning... 🎉💗';
+
+video.pause();
+video.currentTime=0;
+video.muted=false;
+video.volume=1;
+
+const playPromise=video.play();
+
+if(playPromise && typeof playPromise.catch==='function'){
+playPromise.catch(()=>{
+video.muted=true;
+video.play().catch(showCakeVideoError);
+});
+}
+
+chocolateShower();
+fireworks();
+}
+
+function showCakeVideoError(){
+document.getElementById('cakeVideoFallback').classList.add('show');
+}
+
+function retryCakeVideo(){
+const video=document.getElementById('cakePartyVideo');
+
+document.getElementById('cakeVideoFallback').classList.remove('show');
+
+video.currentTime=0;
+video.muted=false;
+
+video.play().catch(()=>{
+video.muted=true;
+video.play().catch(showCakeVideoError);
+});
+}
+
+function closeCakeVideo(){
+const overlay=document.getElementById('cakeVideoOverlay');
+const video=document.getElementById('cakePartyVideo');
+
+video.pause();
+overlay.classList.remove('show');
+
+document.body.style.overflow='';
+
+document.getElementById('cakeMessage').textContent='Yay! What a lovely birthday celebration! Happy Birthday, Gayathri! 💗🎂';
+document.getElementById('cake').textContent='🍰';
+
+chocolateShower();
+fireworks();
+}
+
+document.getElementById('cakePartyVideo').addEventListener('ended',()=>{
+closeCakeVideo();
+});
+
+document.getElementById('cakePartyVideo').addEventListener('error',showCakeVideoError);
+
+document.addEventListener('keydown',event=>{
+if(event.key==='Escape' && document.getElementById('cakeVideoOverlay').classList.contains('show')){
+closeCakeVideo();
+}
+});
+
+// Initialize website.
+buildPhotoCards();
+startMatchingGame();
+
+</script>
+</body>
+</html>
